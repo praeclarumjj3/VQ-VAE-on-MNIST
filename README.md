@@ -63,13 +63,15 @@ VQ-VAE uses 3 losses to compute the total loss during training:
     
 2. **CodeBook loss:** due to the fact that gradients bypass the embedding, a dictionary learning algorithm which uses an **l2** error to move the embedding vectors e_i towards the encoder output is used.
   
-  `codebook_loss = ‖ sg[z_e(x)]− e ‖^2  \
-  // sg represents stop gradient operator meaning no gradient flows through whatever it's applied on`
+    `codebook_loss = ‖ sg[z_e(x)]− e ‖^2`
+  
+    (sg represents stop gradient operator meaning no gradient flows through whatever it's applied on)
   
 3. **Commitment loss:** since the volume of the embedding space is dimensionless, it can grow arbitrarily if the embeddings e_i do not train as fast as the encoder parameters, and thus a commitment loss is added to make sure that the encoder commits to an embedding.
 
-    `commitment_loss = β‖ z_e(x)− sg[e] ‖^2  
-    //β is a hyperparameter that controls how much we want to weigh commitment loss compared to other components`
+    `commitment_loss = β‖ z_e(x)− sg[e] ‖^2` 
+    
+    (β is a hyperparameter that controls how much we want to weigh commitment loss compared to other components)
 
 ## Contents
 1. [Setup Instructions](#1-setup-instructions)
@@ -218,29 +220,20 @@ The reconstructions keep on improving and at the end almost resemble the trainin
 
 ### 4. Image generated from random Gaussian input 
 
-The following image was generated after passing a z sampled randomly from a gaussian with `mean : 0.5` and `std :0.5` as input to model and then passed through the decoder       
+The following image grid was generated after passing a z sampled randomly from a gaussian with `mean : 0.5` and `std :0.5` as input to model and then passed through the decoder       
 
-<img src='readme_images/user_generated_image.png' style="max-width:100%">
+<img src='readme_images/VQ-VAE_pics/vqvae1.png' style="max-width:100%">
 
-  
- Although it’s clear that the images could be better still they resemble digits well enough for a randomly sampled Gaussian input.
+The image doesn't look good because a random input was passed. If we set input in a proper way, the generated could be better.
 
 
- ## 7.Observations
- The model was trained on google colab for 100 epoch, with batch size 64. It took approx 2.5 hours to train.  
+ ## 6.Observations
+ The model was trained on google colab for 100 epochs, with batch size 64. It took approx 2.5 hours to train.  
  
- After training the model was able to reconstruct the input images quite well, and was also able to generate new images although the generated images are not so clear.  
- The T-sne visualisation of the latent space shows that the latent space has been divided into 10 clusters, but also has smooth transitions between these spaces, indicating that the model forced the latent space to be a bit similar with the normal distribution.   
- The digit-transit images show that **latent space has a linear nature** and linearly changing the latent variables from one digit to another leads to a smooth transition.    
-   
-  **Also using the estimate of mean and var for a single class , and generating samples from it gave pretty good images , so this might mean that the marginal distribution of a particular class is can be approximated by a gaussian with the mean and var as given by the method and the dataset can be viewed as a sum of 10 different Gaussians . Although there are a few 4's and 8's generated in the 9's image meaning these Gaussians have some mixing**
+ After training the model was able to reconstruct the input images quite well, and was also able to generate new images although the generated images are not so good.  
+ The training as well as the testing loss kept on decreasing almost monotonically which suggests there was no possible overfitting.
  
- One peculiar thing to notice was that the **KL-Divergence loss actually increased as the model trained** .  
- I found a  possible explanation at  [this Reddit post](https://www.reddit.com/r/MachineLearning/comments/6m2tje/d_kl_divergence_decreases_to_a_point_and_then/)  
-   
- TLDR : Guess its easier for the model to make the distribution gaussian so it first does that , but a perfect gaussian means that there is no uniqueness introduced by the training images , so after a while the distribution shifts from a perfect gaussian to incorporate the subtle patterns in the data and thus increasing the KLD loss .
- 
- ## 8. Credits
+ ## 7. Credits
  The following sources helped a lot to make this repository
  
  - [Neural Discrete Representation Learning - 
