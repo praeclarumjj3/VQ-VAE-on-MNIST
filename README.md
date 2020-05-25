@@ -1,4 +1,4 @@
-# Vector-Quantized Variational AutoEncoder(VQ-VAE) on MNIST
+# Vector-Quantized Variational AutoEncoder(VQ-VAE)
 The repository consists of a VQ-VAE implemented in PyTorch and trained on the MNIST dataset. 
 
 ## VQ-VAE: Overview
@@ -17,11 +17,11 @@ Well, you may ask about the differences VQ-VAEs bring to the table. Let's list t
 2. These integral values are used to index a dictionary of embeddings
 3. The indexed values are then passed on to the decoder 
 
-##Why introduce the differences?
+## Why introduce the differences?
 
 Many important real-world objects are discrete.  For example in images we might have categories like “Cat”, “Car”, etc. and it might not make sense to interpolate between these categories. Discrete representations are also easier to model.
 
-##Architecture
+## Architecture
 
 <img src='readme_images/VQ-VAE_pics/architecture.png' style="max-width:100%">
 
@@ -33,7 +33,7 @@ where:
 - `c` : number of channels in the input image
 - `d` : number of channels in the hidden state
 
-##Working
+## Working
 
 Here's a brief overview of the working of a VQ-VAE network:
 
@@ -43,17 +43,17 @@ Here's a brief overview of the working of a VQ-VAE network:
 4. The distances are calculated and **the most similar(least distance) latent vector(in the embedding space) to the input's latent vector** is selected.
 5. The selected one is fed into the **decoder network which reconstructs the image**. 
 
-<img src='readme_images/VQ-VAE_pics/encoder.png' style="max-width:100%">
+<img src='readme_images/VQ-VAE_pics/encoder.png' style="max-width:50%">
 
-<img src='readme_images/VQ-VAE_pics/decoder.png' style="max-width:100%">
+<img src='readme_images/VQ-VAE_pics/decoder.png' style="max-width:50%">
 
-<img src='readme_images/VQ-VAE_pics/res_block.png' style="max-width:100%">
+<img src='readme_images/VQ-VAE_pics/res_block.png' style="max-width:50%">
 
-##Vector Quantization Layer
+## Vector Quantization Layer
 
 <img src='readme_images/VQ-VAE_pics/vector_quantize.png' style="max-width:100%">
 
-##Loss Functions
+## Loss Functions
 
 VQ-VAE uses 3 losses to compute the total loss during training: 
 
@@ -161,7 +161,7 @@ Command to run tensorboard(in google colab):
 %load_ext tensorboard
 %tensordboard --logdir [path_to_folder_with_logs]
 ```
-## 6. Results
+## 5. Results
 ### 1. Training images
 Training Image
 
@@ -199,10 +199,10 @@ The reconstructions keep on improving and at the end almost resemble the trainin
    <img src='readme_images/VQ-VAE_pics/train_recon.png' style="max-width:100%">       
     
    **Quantization Loss**  
-      <img src='readme_images/train_quan.png' style="max-width:100%">  
+      <img src='readme_images/VQ-VAE_pics/train_quan.png' style="max-width:100%">  
         
    **Total_Loss**
-         <img src='readme_images/train_loss.png' style="max-width:100%">  
+         <img src='readme_images/VQ-VAE_pics/train_loss.png' style="max-width:100%">  
 
 
    **The total loss , reconstruction loss and quantization loss decrease uniformly as expected.**
@@ -210,7 +210,7 @@ The reconstructions keep on improving and at the end almost resemble the trainin
 ### 3. Testing Graphs
         
    **Testing_Loss**
-         <img src='readme_images/test_loss.png' style="max-width:100%">  
+         <img src='readme_images/VQ-VAE_pics/test_loss.png' style="max-width:100%">  
 
 
    **The testing loss decreases uniformly as expected.**
