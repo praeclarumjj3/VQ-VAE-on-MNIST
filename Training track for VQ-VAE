@@ -193,5 +193,4 @@ loss/training_loss: 0.006924 at step 92000.000000
 loss = 0.007516 at epoch 99.000000
 loss/training_loss: 0.007539 at step 93000.000000
 loss = 0.007419 at epoch 100.000000
-
 End Time = 20:29:41

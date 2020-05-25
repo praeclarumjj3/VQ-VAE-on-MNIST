@@ -146,5 +146,4 @@ loss = 2.555367 at epoch 98.000000
 loss/train: 1.840969 at step 46000.000000
 loss = 2.560659 at epoch 99.000000
 loss = 2.561169 at epoch 100.000000
-<Figure size 1500x1500 with 2 Axes>
 End Time = 09:57:53
