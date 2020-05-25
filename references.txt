@@ -1,0 +1,6 @@
+https://github.com/ritheshkumar95/pytorch-vqvae/blob/master/modules.py
+https://nbviewer.jupyter.org/github/zalandoresearch/pytorch-vq-vae/blob/master/vq-vae.ipynb
+https://www.kaggle.com/ameroyer/keras-vq-vae-for-image-generation
+https://blog.usejournal.com/understanding-vector-quantized-variational-autoencoders-vq-vae-323d710a888a
+https://christineai.blog/pixelcnn-and-pixelrnn/
+http://sergeiturukin.com/2017/02/24/gated-pixelcnn.html

@@ -1,0 +1,150 @@
+Start Time = 08:34:37
+loss/train: 6.309877 at step 0.000000
+loss = 2.582579 at epoch 1.000000
+loss = 2.439393 at epoch 2.000000
+loss/train: 2.435206 at step 1000.000000
+loss = 2.373036 at epoch 3.000000
+loss = 2.335623 at epoch 4.000000
+loss/train: 2.317455 at step 2000.000000
+loss = 2.311191 at epoch 5.000000
+loss = 2.292821 at epoch 6.000000
+loss/train: 2.378933 at step 3000.000000
+loss = 2.279107 at epoch 7.000000
+loss = 2.268694 at epoch 8.000000
+loss/train: 2.161851 at step 4000.000000
+loss = 2.260624 at epoch 9.000000
+loss = 2.253945 at epoch 10.000000
+loss/train: 2.230654 at step 5000.000000
+loss = 2.247991 at epoch 11.000000
+loss = 2.243012 at epoch 12.000000
+loss/train: 2.214712 at step 6000.000000
+loss = 2.238638 at epoch 13.000000
+loss = 2.235302 at epoch 14.000000
+loss/train: 2.217358 at step 7000.000000
+loss = 2.232613 at epoch 15.000000
+loss = 2.230457 at epoch 16.000000
+loss = 2.228691 at epoch 17.000000
+loss/train: 2.084018 at step 8000.000000
+loss = 2.227567 at epoch 18.000000
+loss = 2.226535 at epoch 19.000000
+loss/train: 2.097848 at step 9000.000000
+loss = 2.225883 at epoch 20.000000
+loss = 2.225581 at epoch 21.000000
+loss/train: 2.136499 at step 10000.000000
+loss = 2.225928 at epoch 22.000000
+loss = 2.226938 at epoch 23.000000
+loss/train: 2.174844 at step 11000.000000
+loss = 2.228293 at epoch 24.000000
+loss = 2.230165 at epoch 25.000000
+loss/train: 2.038469 at step 12000.000000
+loss = 2.232435 at epoch 26.000000
+loss = 2.234835 at epoch 27.000000
+loss/train: 2.066140 at step 13000.000000
+loss = 2.237441 at epoch 28.000000
+loss = 2.240592 at epoch 29.000000
+loss/train: 2.059281 at step 14000.000000
+loss = 2.243694 at epoch 30.000000
+loss = 2.247183 at epoch 31.000000
+loss/train: 1.997574 at step 15000.000000
+loss = 2.250860 at epoch 32.000000
+loss = 2.254494 at epoch 33.000000
+loss = 2.258030 at epoch 34.000000
+loss/train: 2.080692 at step 16000.000000
+loss = 2.260810 at epoch 35.000000
+loss = 2.263010 at epoch 36.000000
+loss/train: 1.996919 at step 17000.000000
+loss = 2.264287 at epoch 37.000000
+loss = 2.265984 at epoch 38.000000
+loss/train: 1.998513 at step 18000.000000
+loss = 2.269345 at epoch 39.000000
+loss = 2.273655 at epoch 40.000000
+loss/train: 1.977759 at step 19000.000000
+loss = 2.278393 at epoch 41.000000
+loss = 2.283190 at epoch 42.000000
+loss/train: 1.997739 at step 20000.000000
+loss = 2.287584 at epoch 43.000000
+loss = 2.292326 at epoch 44.000000
+loss/train: 2.035805 at step 21000.000000
+loss = 2.297416 at epoch 45.000000
+loss = 2.302418 at epoch 46.000000
+loss/train: 1.993690 at step 22000.000000
+loss = 2.307435 at epoch 47.000000
+loss = 2.312821 at epoch 48.000000
+loss = 2.317720 at epoch 49.000000
+loss/train: 1.973471 at step 23000.000000
+loss = 2.321241 at epoch 50.000000
+loss = 2.324303 at epoch 51.000000
+loss/train: 1.979436 at step 24000.000000
+loss = 2.327484 at epoch 52.000000
+loss = 2.332548 at epoch 53.000000
+loss/train: 1.896684 at step 25000.000000
+loss = 2.340828 at epoch 54.000000
+loss = 2.350030 at epoch 55.000000
+loss/train: 1.942114 at step 26000.000000
+loss = 2.360193 at epoch 56.000000
+loss = 2.368761 at epoch 57.000000
+loss/train: 1.895768 at step 27000.000000
+loss = 2.376632 at epoch 58.000000
+loss = 2.383023 at epoch 59.000000
+loss/train: 1.874600 at step 28000.000000
+loss = 2.388048 at epoch 60.000000
+loss = 2.392020 at epoch 61.000000
+loss/train: 1.904764 at step 29000.000000
+loss = 2.395205 at epoch 62.000000
+loss = 2.398194 at epoch 63.000000
+loss/train: 2.016919 at step 30000.000000
+loss = 2.401228 at epoch 64.000000
+loss = 2.403653 at epoch 65.000000
+loss = 2.407470 at epoch 66.000000
+loss/train: 1.955337 at step 31000.000000
+loss = 2.412257 at epoch 67.000000
+loss = 2.418095 at epoch 68.000000
+loss/train: 1.935662 at step 32000.000000
+loss = 2.423339 at epoch 69.000000
+loss = 2.427984 at epoch 70.000000
+loss/train: 1.964666 at step 33000.000000
+loss = 2.431190 at epoch 71.000000
+loss = 2.433535 at epoch 72.000000
+loss/train: 1.888719 at step 34000.000000
+loss = 2.435305 at epoch 73.000000
+loss = 2.437896 at epoch 74.000000
+loss/train: 1.930874 at step 35000.000000
+loss = 2.441569 at epoch 75.000000
+loss = 2.446080 at epoch 76.000000
+loss/train: 1.919814 at step 36000.000000
+loss = 2.451677 at epoch 77.000000
+loss = 2.456145 at epoch 78.000000
+loss/train: 1.859647 at step 37000.000000
+loss = 2.460381 at epoch 79.000000
+loss = 2.464585 at epoch 80.000000
+loss = 2.469164 at epoch 81.000000
+loss/train: 1.896427 at step 38000.000000
+loss = 2.476384 at epoch 82.000000
+loss = 2.487143 at epoch 83.000000
+loss/train: 1.928342 at step 39000.000000
+loss = 2.496287 at epoch 84.000000
+loss = 2.508615 at epoch 85.000000
+loss/train: 1.896689 at step 40000.000000
+loss = 2.518518 at epoch 86.000000
+loss = 2.523281 at epoch 87.000000
+loss/train: 1.879094 at step 41000.000000
+loss = 2.524844 at epoch 88.000000
+loss = 2.525334 at epoch 89.000000
+loss/train: 1.891789 at step 42000.000000
+loss = 2.526038 at epoch 90.000000
+loss = 2.526959 at epoch 91.000000
+loss/train: 1.903281 at step 43000.000000
+loss = 2.529095 at epoch 92.000000
+loss = 2.530675 at epoch 93.000000
+loss/train: 1.956487 at step 44000.000000
+loss = 2.532299 at epoch 94.000000
+loss = 2.535733 at epoch 95.000000
+loss/train: 1.858555 at step 45000.000000
+loss = 2.539298 at epoch 96.000000
+loss = 2.548459 at epoch 97.000000
+loss = 2.555367 at epoch 98.000000
+loss/train: 1.840969 at step 46000.000000
+loss = 2.560659 at epoch 99.000000
+loss = 2.561169 at epoch 100.000000
+<Figure size 1500x1500 with 2 Axes>
+End Time = 09:57:53
