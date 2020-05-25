@@ -224,10 +224,10 @@ The following image grid was generated after passing a z sampled randomly from a
 
 <img src='readme_images/VQ-VAE_pics/vqvae1.png' style="max-width:100%">
 
-The image doesn't look good because a random input was passed. If we set input in a proper way, the generated could be better.
+The image doesn't look good because a random input was passed. If we set input in a proper way, the generated image could turn out to be better.
 
 
- ## 6.Observations
+ ## 6. Observations
  The model was trained on google colab for 100 epochs, with batch size 64. It took approx 2.5 hours to train.  
  
  After training the model was able to reconstruct the input images quite well, and was also able to generate new images although the generated images are not so good.  
