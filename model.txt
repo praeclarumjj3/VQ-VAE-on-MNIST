@@ -2,7 +2,4 @@ The zip file containing the pre-trained VQ VAE model on MNIST dataset:
 
 https://drive.google.com/drive/folders/10iMUG9YYy2EhSvL8XEX1_WXVEwV7CfKH?usp=sharing
 
-The zip file containing the pre-trained VQ VAE with GatedPixelCNN model on MNIST dataset:
-
-https://drive.google.com/drive/folders/116z85uU0SCNVYTRzGHz5JdgbAbtDG81d?usp=sharing
 

@@ -122,11 +122,11 @@ It also creates a `logs` folder and `models` folder and inside them creates a fo
 To generate new images from z sampled randomly from a gaussian with `mean : 0.5` and `std :0.5` run the following command(in google colab):  
 
 ```
-! python3 generate.py  --model [SAVED_MODEL_FILENAME] --name_of_model [MODEL_NAME] --device ['cpu' or 'cuda' ] --hidden-size [SIZE] --k [NUMBER] --filename [SAVING_NAME] 
+! python3 generate.py  --model [SAVED_MODEL_FILENAME] --input [MNIST_or_random] --device ['cpu' or 'cuda' ] --hidden-size [SIZE] --k [NUMBER] --filename [SAVING_NAME] 
 ```
 
 - `model`        - filename containing the model
-- `name_of_model`- VQ-VAE or PixelCNN
+- `input`        - MNIST or random
 - `device`       - set the device (cpu or cuda, default: cpu)
 - `hidden-size`  - size of the latent vectors (default: 256)
 - `k`            - number of latent vectors (default: 512)
@@ -142,18 +142,15 @@ The repository contains the following files
 
 - `modules.py` - Contains the different modules used for making our model
 - `VQ-VAE.py`  - Contains the functions and code for training our VQ-VAE model 
-- `vector_quantizer.py` - The vector quantization classes are defined in this file
-- `VQ-VAE_PixelCNN.py`  - Contains the functions and code for training our VQ-VAE model with GatedPixelCNN as prior  
-- `generate-py` - Generates new images from a pre-trained model.
-- `model.txt` - Contains a link to a pre-trained models
+- `vector_quantizer.py` - The vector quantization classes are defined in this file 
+- `generate-py` - Generates new images from a pre-trained model
+- `model.txt` - Contains a link to a pre-trained model
 - `README.md` - README giving an overview of the repo
 - `references.txt` - references used while creating this repo 
 - `readme_images` - Has various images for the readme
 - `MNIST` - Contains the zipped MNIST Dataset(though it will be downloaded automatically if needed)
 - `Training track for VQ-VAE.txt` - contains the loss values during the training of our VQ-VAE model 
-- `Training track for VQ-VAE + PixelCNN` - contains the loss values during the training of our VQ-VAE model with GatedPixelCNN as prior 
 - `logs_VQ-VAE` - Contains the zipped tensorboard logs for our VQ-VAE model (automatically created by the program)
-- `logs_VQ-VAE with Gated PixelCNN` - Contains the zipped tensorboard logs for our VQ-VAE model with GatedPixelCNN as prior (automatically created by the program)
 - `VQ-VAE_graph` - Contains the zipped tensorboard logs with the graph for our VQ-VAE model (automatically created by the program)
 - `testers.py` - Contains some functions to test our defined modules
 
@@ -204,21 +201,26 @@ The reconstructions keep on improving and at the end almost resemble the trainin
       <img src='readme_images/VQ-VAE_pics/train_quan.png' style="max-width:100%">  
         
    **Total_Loss**
-         <img src='readme_images/VQ-VAE_pics/train_loss.png' style="max-width:100%">  
-
+       <img src='readme_images/VQ-VAE_pics/train_loss.png' style="max-width:100%">  
 
    **The total loss , reconstruction loss and quantization loss decrease uniformly as expected.**
 
 ### 3. Testing Graphs
         
    **Testing_Loss**
-         <img src='readme_images/VQ-VAE_pics/test_loss.png' style="max-width:100%">  
+        <img src='readme_images/VQ-VAE_pics/test_loss.png' style="max-width:100%">  
 
 
    **The testing loss decreases uniformly as expected.**
      
 
 ### 4. Image generated from random Gaussian input 
+
+The following image grid was generated after passing MNIST images as inputs:
+
+<img src='readme_images/VQ-VAE_pics/vqvaegen.png' style="max-width:100%">
+
+The generation is pretty good.
 
 The following image grid was generated after passing a z sampled randomly from a gaussian with `mean : 0.5` and `std :0.5` as input to model and then passed through the decoder       
 
@@ -244,7 +246,7 @@ Ali Razavi, Aaron van den Oord, Oriol Vinyals](https://arxiv.org/abs/1906.00446)
  - https://www.kaggle.com/ameroyer/keras-vq-vae-for-image-generation
  - https://blog.usejournal.com/understanding-vector-quantized-variational-autoencoders-vq-vae-323d710a888a
  - https://christineai.blog/pixelcnn-and-pixelrnn/
- - https://github.com/ritheshkumar95/pytorch-vqvae/blob/master/modules.py
+ - https://github.com/ritheshkumar95/pytorch-vqvae
  - https://github.com/ayushtues/GenZoo
  
  
