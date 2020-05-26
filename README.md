@@ -53,6 +53,15 @@ Here's a brief overview of the working of a VQ-VAE network:
 
 <img src='readme_images/VQ-VAE_pics/vector_quantize.png' style="max-width:100%">
 
+The working of VQ layer can be explained in six steps as numbered in the figure:
+
+1. **Reshape:** All dimensions except the last one are combined into one so that we have n*h*w vectors each of dimensionality d
+2. **Calculating distances:** For each of the n*h*w vectors we calculate distance from each of k vectors of the embedding dictionary to obtain a matrix of shape (n*h*w, k)
+3. **Argmin:** For each of the n*h*w vectors we find the the index of closest of the k vectors from dictionary
+4. **Index from dictionary:** Index the closest vector from the dictionary for each of n*h*w vectors
+5. **Reshape:** Convert back to shape (n, h, w, d)
+6. **Copying gradients:** It's not possible to train this architecture through backpropagation as the gradient won’t flow through argmin. Hence we try to approximate by copying the gradients from z_q back to z_e. In this way we’re not actually minimizing the loss function but are still able to pass some information back for training.
+
 ## Loss Functions
 
 VQ-VAE uses 3 losses to compute the total loss during training: 
@@ -82,7 +91,7 @@ VQ-VAE uses 3 losses to compute the total loss during training:
     1. [Training images](#1-training-images)
     2. [Training Graphs](#2-training-graphs)
     3. [Testing Graphs](#3-testing-graphs)
-    4. [Image generated from random gaussian input ](#4-image-generated-from-random-gaussian-input)
+    4. [Generated images](#4-generated-images)
 6. [Observations](#6-observations)
 7. [Credits](#7-credits)
 
@@ -197,24 +206,26 @@ The reconstructions keep on improving and at the end almost resemble the trainin
   
    <img src='readme_images/VQ-VAE_pics/train_recon.png' style="max-width:100%">       
     
-   **Quantization Loss**  
-      <img src='readme_images/VQ-VAE_pics/train_quan.png' style="max-width:100%">  
+  **Quantization Loss**  
+   
+   <img src='readme_images/VQ-VAE_pics/train_quan.png' style="max-width:100%">  
         
-   **Total_Loss**
-       <img src='readme_images/VQ-VAE_pics/train_loss.png' style="max-width:100%">  
+  **Total_Loss**
+       
+   <img src='readme_images/VQ-VAE_pics/train_loss.png' style="max-width:100%">  
 
-   **The total loss , reconstruction loss and quantization loss decrease uniformly as expected.**
+  **The total loss , reconstruction loss and quantization loss decrease uniformly as expected.**
 
 ### 3. Testing Graphs
         
-   **Testing_Loss**
-        <img src='readme_images/VQ-VAE_pics/test_loss.png' style="max-width:100%">  
+  **Testing_Loss**
+        
+   <img src='readme_images/VQ-VAE_pics/test_loss.png' style="max-width:100%">  
 
-
-   **The testing loss decreases uniformly as expected.**
+  **The testing loss decreases uniformly as expected.**
      
 
-### 4. Image generated from random Gaussian input 
+### 4. Generated images
 
 The following image grid was generated after passing MNIST images as inputs:
 
