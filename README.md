@@ -46,9 +46,7 @@ Here's a brief overview of the working of a VQ-VAE network:
 4. The distances are calculated and **the most similar(least distance) latent vector(in the embedding space) to the input's latent vector** is selected.
 5. The selected one is fed into the **decoder network which reconstructs the image**. 
 
-<img src='readme_images/VQ-VAE_pics/decoder.png' style="max-width:100%">
-
-<img src='readme_images/VQ-VAE_pics/resblock.png' style="max-width:100%">
+<img src='readme_images/VQ-VAE_pics/decoder.png' style="max-width:50%">  <img src='readme_images/VQ-VAE_pics/resblock.png' style="max-width:50%">
 
 ## Vector Quantization Layer
 
