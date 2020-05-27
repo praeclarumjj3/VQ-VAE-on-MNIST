@@ -8,7 +8,7 @@ from torchvision import transforms, datasets
 def generate_samples(images, model, args):
     with torch.no_grad():
         images = images.to(args.device)
-        x_tilde, _, _ = model.decode(images)
+        x_tilde, _, _ = model(images)
     return x_tilde
 
 
@@ -31,16 +31,15 @@ def main(args):
                                                   pin_memory=True)
 
         real_batch, _ = next(iter(test_loader))
-        random_images = real_batch[0].to(args.device)[:100]
 
     else:
-        random_images = torch.normal(mean=0.5, std=0.5, size=(100, 1, 28, 28))
+        real_batch = torch.normal(mean=0, std=1, size=(100, 1, 28, 28))
 
     model = VectorQuantizedVAE(1, args.hidden_size_vae, args.k).to(args.device)
     with open(args.model, 'rb') as f:
         state_dict = torch.load(f)
         model.load_state_dict(state_dict)
-    generated = generate_samples(random_images, model, args)
+    generated = generate_samples(real_batch, model, args)
     save_image(make_grid(generated, nrow=10), './generatedImages/{0}.png'.format(args.filename))
 
     now = datetime.now()
@@ -61,8 +60,8 @@ if __name__ == '__main__':
                         help='MNIST or random')
 
     # Latent space
-    parser.add_argument('--hidden-size-vae', type=int, default=256,
-                        help='size of the latent vectors (default: 256)')
+    parser.add_argument('--hidden-size-vae', type=int, default=40,
+                        help='size of the latent vectors')
     parser.add_argument('--k', type=int, default=512,
                         help='number of latent vectors (default: 512)')
 

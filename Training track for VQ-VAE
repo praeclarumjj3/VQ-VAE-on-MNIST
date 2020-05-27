@@ -1,196 +1,22 @@
-Start Time = 18:17:27
-loss/training_loss: 4.708426 at step 0.000000
-loss = 0.106939 at epoch 1.000000
-loss/training_loss: 5.005161 at step 1000.000000
-loss = 0.062852 at epoch 2.000000
-loss/training_loss: 0.814542 at step 2000.000000
-loss = 0.052767 at epoch 3.000000
-loss/training_loss: 0.327080 at step 3000.000000
-loss = 0.042685 at epoch 4.000000
-loss/training_loss: 0.149465 at step 4000.000000
-loss = 0.037057 at epoch 5.000000
-loss/training_loss: 0.109335 at step 5000.000000
-loss = 0.033525 at epoch 6.000000
-loss/training_loss: 0.096330 at step 6000.000000
-loss = 0.029098 at epoch 7.000000
-loss/training_loss: 0.079463 at step 7000.000000
-loss = 0.026592 at epoch 8.000000
-loss/training_loss: 0.045904 at step 8000.000000
-loss = 0.021920 at epoch 9.000000
-loss/training_loss: 0.038468 at step 9000.000000
-loss = 0.019066 at epoch 10.000000
-loss/training_loss: 0.032315 at step 10000.000000
-loss = 0.016722 at epoch 11.000000
-loss/training_loss: 0.030283 at step 11000.000000
-loss = 0.016114 at epoch 12.000000
-loss/training_loss: 0.029215 at step 12000.000000
-loss = 0.015345 at epoch 13.000000
-loss/training_loss: 0.023059 at step 13000.000000
-loss = 0.014911 at epoch 14.000000
-loss/training_loss: 0.022771 at step 14000.000000
-loss = 0.014324 at epoch 15.000000
-loss/training_loss: 0.024623 at step 15000.000000
-loss = 0.012861 at epoch 16.000000
-loss = 0.012406 at epoch 17.000000
-loss/training_loss: 0.018614 at step 16000.000000
-loss = 0.012005 at epoch 18.000000
-loss/training_loss: 0.019327 at step 17000.000000
-loss = 0.011222 at epoch 19.000000
-loss/training_loss: 0.018083 at step 18000.000000
-loss = 0.010793 at epoch 20.000000
-loss/training_loss: 0.017338 at step 19000.000000
-loss = 0.011367 at epoch 21.000000
-loss/training_loss: 0.017500 at step 20000.000000
-loss = 0.010320 at epoch 22.000000
-loss/training_loss: 0.016009 at step 21000.000000
-loss = 0.010039 at epoch 23.000000
-loss/training_loss: 0.018508 at step 22000.000000
-loss = 0.010128 at epoch 24.000000
-loss/training_loss: 0.014077 at step 23000.000000
-loss = 0.009676 at epoch 25.000000
-loss/training_loss: 0.014103 at step 24000.000000
-loss = 0.009637 at epoch 26.000000
-loss/training_loss: 0.013566 at step 25000.000000
-loss = 0.009446 at epoch 27.000000
-loss/training_loss: 0.013671 at step 26000.000000
-loss = 0.009105 at epoch 28.000000
-loss/training_loss: 0.013541 at step 27000.000000
-loss = 0.008618 at epoch 29.000000
-loss/training_loss: 0.013277 at step 28000.000000
-loss = 0.008317 at epoch 30.000000
-loss/training_loss: 0.013879 at step 29000.000000
-loss = 0.008145 at epoch 31.000000
-loss/training_loss: 0.012949 at step 30000.000000
-loss = 0.008012 at epoch 32.000000
-loss = 0.008056 at epoch 33.000000
-loss/training_loss: 0.011560 at step 31000.000000
-loss = 0.007797 at epoch 34.000000
-loss/training_loss: 0.014095 at step 32000.000000
-loss = 0.007854 at epoch 35.000000
-loss/training_loss: 0.010288 at step 33000.000000
-loss = 0.007927 at epoch 36.000000
-loss/training_loss: 0.011258 at step 34000.000000
-loss = 0.007986 at epoch 37.000000
-loss/training_loss: 0.011397 at step 35000.000000
-loss = 0.008165 at epoch 38.000000
-loss/training_loss: 0.011203 at step 36000.000000
-loss = 0.008095 at epoch 39.000000
-loss/training_loss: 0.011846 at step 37000.000000
-loss = 0.008269 at epoch 40.000000
-loss/training_loss: 0.011863 at step 38000.000000
-loss = 0.007873 at epoch 41.000000
-loss/training_loss: 0.013088 at step 39000.000000
-loss = 0.007448 at epoch 42.000000
-loss/training_loss: 0.010952 at step 40000.000000
-loss = 0.007454 at epoch 43.000000
-loss/training_loss: 0.011741 at step 41000.000000
-loss = 0.007559 at epoch 44.000000
-loss/training_loss: 0.010429 at step 42000.000000
-loss = 0.007647 at epoch 45.000000
-loss/training_loss: 0.010070 at step 43000.000000
-loss = 0.008308 at epoch 46.000000
-loss/training_loss: 0.010248 at step 44000.000000
-loss = 0.008251 at epoch 47.000000
-loss/training_loss: 0.011371 at step 45000.000000
-loss = 0.008029 at epoch 48.000000
-loss = 0.007862 at epoch 49.000000
-loss/training_loss: 0.009700 at step 46000.000000
-loss = 0.007694 at epoch 50.000000
-loss/training_loss: 0.009485 at step 47000.000000
-loss = 0.007457 at epoch 51.000000
-loss/training_loss: 0.010425 at step 48000.000000
-loss = 0.007379 at epoch 52.000000
-loss/training_loss: 0.010384 at step 49000.000000
-loss = 0.007209 at epoch 53.000000
-loss/training_loss: 0.008954 at step 50000.000000
-loss = 0.007165 at epoch 54.000000
-loss/training_loss: 0.009887 at step 51000.000000
-loss = 0.007196 at epoch 55.000000
-loss/training_loss: 0.009144 at step 52000.000000
-loss = 0.007265 at epoch 56.000000
-loss/training_loss: 0.009552 at step 53000.000000
-loss = 0.007327 at epoch 57.000000
-loss/training_loss: 0.008721 at step 54000.000000
-loss = 0.007131 at epoch 58.000000
-loss/training_loss: 0.010179 at step 55000.000000
-loss = 0.006959 at epoch 59.000000
-loss/training_loss: 0.008538 at step 56000.000000
-loss = 0.007103 at epoch 60.000000
-loss/training_loss: 0.009573 at step 57000.000000
-loss = 0.007189 at epoch 61.000000
-loss/training_loss: 0.008196 at step 58000.000000
-loss = 0.007257 at epoch 62.000000
-loss/training_loss: 0.009239 at step 59000.000000
-loss = 0.007176 at epoch 63.000000
-loss/training_loss: 0.010344 at step 60000.000000
-loss = 0.007196 at epoch 64.000000
-loss = 0.007316 at epoch 65.000000
-loss/training_loss: 0.009249 at step 61000.000000
-loss = 0.007642 at epoch 66.000000
-loss/training_loss: 0.009063 at step 62000.000000
-loss = 0.007794 at epoch 67.000000
-loss/training_loss: 0.008693 at step 63000.000000
-loss = 0.007547 at epoch 68.000000
-loss/training_loss: 0.008846 at step 64000.000000
-loss = 0.007436 at epoch 69.000000
-loss/training_loss: 0.007724 at step 65000.000000
-loss = 0.007396 at epoch 70.000000
-loss/training_loss: 0.008908 at step 66000.000000
-loss = 0.007207 at epoch 71.000000
-loss/training_loss: 0.008077 at step 67000.000000
-loss = 0.007240 at epoch 72.000000
-loss/training_loss: 0.008219 at step 68000.000000
-loss = 0.007059 at epoch 73.000000
-loss/training_loss: 0.008241 at step 69000.000000
-loss = 0.006991 at epoch 74.000000
-loss/training_loss: 0.007835 at step 70000.000000
-loss = 0.007019 at epoch 75.000000
-loss/training_loss: 0.008074 at step 71000.000000
-loss = 0.006840 at epoch 76.000000
-loss/training_loss: 0.008053 at step 72000.000000
-loss = 0.006844 at epoch 77.000000
-loss/training_loss: 0.008260 at step 73000.000000
-loss = 0.006870 at epoch 78.000000
-loss/training_loss: 0.007468 at step 74000.000000
-loss = 0.006974 at epoch 79.000000
-loss/training_loss: 0.008275 at step 75000.000000
-loss = 0.007110 at epoch 80.000000
-loss = 0.006949 at epoch 81.000000
-loss/training_loss: 0.008010 at step 76000.000000
-loss = 0.006854 at epoch 82.000000
-loss/training_loss: 0.007871 at step 77000.000000
-loss = 0.006769 at epoch 83.000000
-loss/training_loss: 0.007926 at step 78000.000000
-loss = 0.006896 at epoch 84.000000
-loss/training_loss: 0.008066 at step 79000.000000
-loss = 0.006788 at epoch 85.000000
-loss/training_loss: 0.007726 at step 80000.000000
-loss = 0.006750 at epoch 86.000000
-loss/training_loss: 0.008058 at step 81000.000000
-loss = 0.006755 at epoch 87.000000
-loss/training_loss: 0.007143 at step 82000.000000
-loss = 0.006794 at epoch 88.000000
-loss/training_loss: 0.008594 at step 83000.000000
-loss = 0.006916 at epoch 89.000000
-loss/training_loss: 0.007579 at step 84000.000000
-loss = 0.006956 at epoch 90.000000
-loss/training_loss: 0.006743 at step 85000.000000
-loss = 0.006825 at epoch 91.000000
-loss/training_loss: 0.007652 at step 86000.000000
-loss = 0.006843 at epoch 92.000000
-loss/training_loss: 0.007603 at step 87000.000000
-loss = 0.006812 at epoch 93.000000
-loss/training_loss: 0.007449 at step 88000.000000
-loss = 0.006887 at epoch 94.000000
-loss/training_loss: 0.007244 at step 89000.000000
-loss = 0.006897 at epoch 95.000000
-loss/training_loss: 0.007520 at step 90000.000000
-loss = 0.007034 at epoch 96.000000
-loss = 0.007313 at epoch 97.000000
-loss/training_loss: 0.006955 at step 91000.000000
-loss = 0.007456 at epoch 98.000000
-loss/training_loss: 0.006924 at step 92000.000000
-loss = 0.007516 at epoch 99.000000
-loss/training_loss: 0.007539 at step 93000.000000
-loss = 0.007419 at epoch 100.000000
-End Time = 20:29:41
+Start Time = 16:31:51
+loss/training_loss: 4.873107 at step 0.000000
+loss = 0.079167 at epoch 1.000000
+loss/training_loss: 2.899705 at step 1000.000000
+loss = 0.070570 at epoch 2.000000
+loss/training_loss: 1.339955 at step 2000.000000
+loss = 0.062758 at epoch 3.000000
+loss/training_loss: 0.663345 at step 3000.000000
+loss = 0.055120 at epoch 4.000000
+loss/training_loss: 0.357436 at step 4000.000000
+loss = 0.048660 at epoch 5.000000
+loss/training_loss: 0.220252 at step 5000.000000
+loss = 0.043043 at epoch 6.000000
+loss/training_loss: 0.166360 at step 6000.000000
+loss = 0.038322 at epoch 7.000000
+loss/training_loss: 0.120994 at step 7000.000000
+loss = 0.034008 at epoch 8.000000
+loss/training_loss: 0.090694 at step 8000.000000
+loss = 0.031269 at epoch 9.000000
+loss/training_loss: 0.080673 at step 9000.000000
+loss = 0.027794 at epoch 10.000000
+End Time = 16:35:38

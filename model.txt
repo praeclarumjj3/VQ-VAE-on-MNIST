@@ -1,5 +1,5 @@
 The zip file containing the pre-trained VQ VAE model on MNIST dataset:
 
-https://drive.google.com/drive/folders/10iMUG9YYy2EhSvL8XEX1_WXVEwV7CfKH?usp=sharing
+https://drive.google.com/drive/folders/1MSD0a1rx0O_V7G7NIAHGSos6lVY3loEF?usp=sharing
 
 

@@ -28,7 +28,7 @@ def train(data_loader, model, optimizer, args, writer):
         loss = loss_recons + loss_vq + args.beta * loss_commit
         loss.backward()
 
-        if (args.steps % 1000 == 0):
+        if args.steps % 1000 == 0:
             print('loss/training_loss: {:f} at step {:f}'.format(loss.item(), args.steps))
 
         # Logs
@@ -89,7 +89,7 @@ def main(args):
                                                batch_size=args.batch_size, shuffle=True,
                                                num_workers=args.num_workers, pin_memory=True)
 
-    test_loader = torch.utils.data.DataLoader(test_set,
+    test_loader = torch.utils.data.DataLoader(test_set, num_workers=args.num_workers,
                                               batch_size=16, shuffle=False)
 
     # Fixed images for TensorBoard
@@ -127,23 +127,6 @@ def main(args):
         with open('{0}/model_{1}.pt'.format(save_filename, epoch + 1), 'wb') as f:
             torch.save(model.state_dict(), f)
 
-    # Grab a batch of real images from the dataloader
-    real_batch = next(iter(train_loader))
-
-    # Plot the real images
-    plt.figure(figsize=(15, 15))
-    plt.subplot(1, 2, 1)
-    plt.axis("off")
-    plt.title("Original Images")
-    plt.imshow(
-        np.transpose(vutils.make_grid(real_batch[0].to(args.device)[:64], padding=5, normalize=True).cpu(), (1, 2, 0)))
-
-    # Plot the fake images from the last epoch
-    plt.subplot(1, 2, 2)
-    plt.axis("off")
-    plt.title("Generated Images")
-    plt.imshow(np.transpose(img_list[-1], (1, 2, 0)))
-    plt.show()
 
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
@@ -162,14 +145,14 @@ if __name__ == '__main__':
                         help='name of the data folder')
 
     # Latent space
-    parser.add_argument('--hidden-size', type=int, default=256,
-                        help='size of the latent vectors (default: 256)')
+    parser.add_argument('--hidden-size', type=int, default=40,
+                        help='size of the latent vectors')
     parser.add_argument('--k', type=int, default=512,
                         help='number of latent vectors (default: 512)')
 
     # Optimization
     parser.add_argument('--batch-size', type=int, default=64,
-                        help='batch size (default: 128)')
+                        help='batch size (default: 64)')
     parser.add_argument('--num-epochs', type=int, default=100,
                         help='number of epochs (default: 100)')
     parser.add_argument('--lr', type=float, default=2e-4,
@@ -203,3 +186,4 @@ if __name__ == '__main__':
     args.steps = 0
 
     main(args)
+

@@ -39,15 +39,16 @@ Here's a brief overview of the working of a VQ-VAE network:
 
 1. VQ-VAE consists of an encoder, an embedding(or a codeBook) and a decoder. 
 2. When an image is passed as input, it is converted into **latent vectors using the encoder network**. 
+
+<img src='readme_images/VQ-VAE_pics/encoder.png' style="max-width:100%">
+
 3. The embedding space consists of many latent vectors, which are compared to that of the input one. 
 4. The distances are calculated and **the most similar(least distance) latent vector(in the embedding space) to the input's latent vector** is selected.
 5. The selected one is fed into the **decoder network which reconstructs the image**. 
 
-<img src='readme_images/VQ-VAE_pics/encoder.png' style="max-width:50%">
+<img src='readme_images/VQ-VAE_pics/decoder.png' style="max-width:100%">
 
-<img src='readme_images/VQ-VAE_pics/decoder.png' style="max-width:50%">
-
-<img src='readme_images/VQ-VAE_pics/res_block.png' style="max-width:50%">
+<img src='readme_images/VQ-VAE_pics/resblock.png' style="max-width:100%">
 
 ## Vector Quantization Layer
 
@@ -95,8 +96,6 @@ VQ-VAE uses 3 losses to compute the total loss during training:
 6. [Observations](#6-observations)
 7. [Credits](#7-credits)
 
-So basically the loss has two opposing functions ..the reconstruction loss which tries to recreate the input as such not caring about the latent variable distribution and the KL divergence term which forces the distribution to be gaussian.
-
 ## 1. Setup Instructions
 You can either download the repo or clone it by running the following in cmd prompt
 ```
@@ -114,10 +113,10 @@ You can train the model from scratch by the following command (in google colab)
 - `output-folder`- name of the data folder
 - `data-folder`  - name of the data folder
 - `device`       - set the device (cpu or cuda, default: cpu)
-- `hidden-size`  - size of the latent vectors (default: 256)
-- `k`            - number of latent vectors (default: 512)
+- `hidden-size`  - size of the latent vectors (default: 40 )
+- `k`            - number of latent vectors(default: 512)
 - `batch-size`   - batch size (default: 128)
-- `num-epochs`   - number of epochs (default: 100)
+- `num-epochs`   - number of epochs (default: 10)
 - `lr`           - learning rate for Adam optimizer (default: 2e-4)
 - `beta`         - contribution of commitment loss, between 0.1 and 2.0 (default: 1.0)
 - `num-workers`  - number of workers for trajectories sampling (default: cpu_count() - 1)
@@ -128,7 +127,7 @@ It also creates a `logs` folder and `models` folder and inside them creates a fo
 
 ## 3. Generating images from model
 
-To generate new images from z sampled randomly from a gaussian with `mean : 0.5` and `std :0.5` run the following command(in google colab):  
+To generate new images from z sampled randomly from a unit gaussian run the following command(in google colab):  
 
 ```
 ! python3 generate.py  --model [SAVED_MODEL_FILENAME] --input [MNIST_or_random] --device ['cpu' or 'cuda' ] --hidden-size [SIZE] --k [NUMBER] --filename [SAVING_NAME] 
@@ -137,7 +136,7 @@ To generate new images from z sampled randomly from a gaussian with `mean : 0.5`
 - `model`        - filename containing the model
 - `input`        - MNIST or random
 - `device`       - set the device (cpu or cuda, default: cpu)
-- `hidden-size`  - size of the latent vectors (default: 256)
+- `hidden-size`  - size of the latent vectors(default: 40 )
 - `k`            - number of latent vectors (default: 512)
 - `filename`     - name with which file is to be saved
 
@@ -160,7 +159,6 @@ The repository contains the following files
 - `MNIST` - Contains the zipped MNIST Dataset(though it will be downloaded automatically if needed)
 - `Training track for VQ-VAE.txt` - contains the loss values during the training of our VQ-VAE model 
 - `logs_VQ-VAE` - Contains the zipped tensorboard logs for our VQ-VAE model (automatically created by the program)
-- `VQ-VAE_graph` - Contains the zipped tensorboard logs with the graph for our VQ-VAE model (automatically created by the program)
 - `testers.py` - Contains some functions to test our defined modules
 
 Command to run tensorboard(in google colab):
@@ -179,25 +177,25 @@ Image from 0th epoch
 
 <img src='readme_images/VQ-VAE_pics/epoch0.png' style="max-width:100%">
 
-Image from 20th epoch  
+Image from 2nd epoch  
 
-<img src='readme_images/VQ-VAE_pics/epoch20.png' style="max-width:100%">
+<img src='readme_images/VQ-VAE_pics/epoch2.png' style="max-width:100%">
 
-Image from 40th epoch  
+Image from 4th epoch  
 
-<img src='readme_images/VQ-VAE_pics/epoch40.png' style="max-width:100%">
+<img src='readme_images/VQ-VAE_pics/epoch4.png' style="max-width:100%">
 
-Image from 60th epoch  
+Image from 6th epoch  
 
-<img src='readme_images/VQ-VAE_pics/epoch60.png' style="max-width:100%">
+<img src='readme_images/VQ-VAE_pics/epoch6.png' style="max-width:100%">
 
-Image from 80th epoch  
+Image from 8th epoch  
 
-<img src='readme_images/VQ-VAE_pics/epoch80.png' style="max-width:100%">
+<img src='readme_images/VQ-VAE_pics/epoch8.png' style="max-width:100%">
 
-Image from 100th epoch  
+Image from 10th epoch  
 
-<img src='readme_images/VQ-VAE_pics/epoch100.png' style="max-width:100%"> 
+<img src='readme_images/VQ-VAE_pics/epoch10.png' style="max-width:100%"> 
   
 The reconstructions keep on improving and at the end almost resemble the training_set images which is reflected in the loss values(check in `Training track for VQ-VAE.txt`).
 
@@ -229,22 +227,24 @@ The reconstructions keep on improving and at the end almost resemble the trainin
 
 The following image grid was generated after passing MNIST images as inputs:
 
-<img src='readme_images/VQ-VAE_pics/vqvaegen.png' style="max-width:100%">
+<img src='readme_images/VQ-VAE_pics/gen_MNIST.png' style="max-width:100%">
 
 The generation is pretty good.
 
-The following image grid was generated after passing a z sampled randomly from a gaussian with `mean : 0.5` and `std :0.5` as input to model and then passed through the decoder       
+The following image grid was generated after passing a z sampled randomly from a unit gaussian  as input to model and then passed through the decoder       
 
-<img src='readme_images/VQ-VAE_pics/vqvae1.png' style="max-width:100%">
+<img src='readme_images/VQ-VAE_pics/gen_rand_1.png' style="max-width:50%"> <img src='readme_images/VQ-VAE_pics/gen_rand_2.png' style="max-width:50%">
 
-The image doesn't look good because a random input was passed. If we set input in a proper way, the generated image could turn out to be better.
+The image doesn't look perfect. Tuning the latent space dimensions, number of embedding vectors etc. can help in generating better random images.
 
 
  ## 6. Observations
- The model was trained on google colab for 100 epochs, with batch size 64. It took approx 2.5 hours to train.  
+ The model was trained on google colab for 10 epochs, with batch size 128. It took approx 2.5 hours to train.  
  
  After training the model was able to reconstruct the input images quite well, and was also able to generate new images although the generated images are not so good.  
- The training as well as the testing loss kept on decreasing almost monotonically which suggests there was no possible overfitting.
+ The training as well as the testing loss also kept on decreasing almost monotonically.
+ 
+ I observed that training the model for more than 10-20 epochs produced results that suggested a probable sign of overfitting in the model. Also, I experimented with different dimensions of the latednt space and in the end `dimension = 40` produced the best results. The best range for dimension came out to be between 16-42.
  
  ## 7. Credits
  The following sources helped a lot to make this repository
