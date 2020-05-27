@@ -231,7 +231,7 @@ The following image grid was generated after passing MNIST images as inputs:
 
 The generation is pretty good.
 
-The following image grids was generated after passing a z sampled randomly from a unit gaussian  as input to model and then passed through the decoder       
+The following image grids were generated after passing a z sampled randomly from a unit gaussian  as input to model and then passed through the decoder       
 
 <img src='readme_images/VQ-VAE_pics/gen_rand_1.png' style="max-width:50%">     <img src='readme_images/VQ-VAE_pics/gen_rand_2.png' style="max-width:50%">
 
