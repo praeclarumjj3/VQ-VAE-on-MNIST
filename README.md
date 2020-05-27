@@ -237,7 +237,7 @@ The images don't look perfect. Tuning the latent space's dimensions, number of e
 
 
  ## 6. Observations
- The model was trained on google colab for 10 epochs, with batch size 128. It took approx 2.5 hours to train.  
+ The model was trained on google colab for 10 epochs, with batch size 128. 
  
  After training the model was able to reconstruct the input images quite well, and was also able to generate new images although the generated images are not so good.  
  The training as well as the testing loss also kept on decreasing almost monotonically.
