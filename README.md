@@ -231,11 +231,11 @@ The following image grid was generated after passing MNIST images as inputs:
 
 The generation is pretty good.
 
-The following image grid was generated after passing a z sampled randomly from a unit gaussian  as input to model and then passed through the decoder       
+The following image grids was generated after passing a z sampled randomly from a unit gaussian  as input to model and then passed through the decoder       
 
-<img src='readme_images/VQ-VAE_pics/gen_rand_1.png' style="max-width:50%"> <img src='readme_images/VQ-VAE_pics/gen_rand_2.png' style="max-width:50%">
+<img src='readme_images/VQ-VAE_pics/gen_rand_1.png' style="max-width:50%">     <img src='readme_images/VQ-VAE_pics/gen_rand_2.png' style="max-width:50%">
 
-The image doesn't look perfect. Tuning the latent space dimensions, number of embedding vectors etc. can help in generating better random images.
+The images don't look perfect. Tuning the latent space's dimensions, number of embedding vectors etc. can help in generating better random images.
 
 
  ## 6. Observations
